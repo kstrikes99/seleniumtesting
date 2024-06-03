@@ -1,0 +1,57 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navigation .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation .nav-item {
+    display: inline;
+    margin: 0 10px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.nav-link:hover {
+    background-color: #555;
+}
+
+.content {
+    padding: 20px;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Specific Styles for Links */
+.nav-link.page1:hover {
+    background-color: #ff6347;
+}
+
+.nav-link.page2:hover {
+    background-color: #4682b4;
+}
