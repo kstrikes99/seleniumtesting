@@ -5,6 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Page</title>
     <link rel="stylesheet" href="site.css">
+    <style>
+        /* Dropdown styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header id="main-header" class="header">
@@ -12,18 +43,47 @@
         <nav id="main-nav" class="navigation">
             <ul id="nav-list" class="nav-list">
                 <li id="nav-home" class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li id="nav-page1" class="nav-item"><a href="page1.html" class="nav-link">frequent links</a></li>
-                <li id="nav-page2" class="nav-item"><a href="page2.html" class="nav-link">about me</a></li>
+                <li id="nav-page1" class="nav-item dropdown">
+                    <a href="page1.html" class="nav-link" id="page1-link">Frequent Links</a>
+                    <div class="dropdown-content" id="dropdown-menu">
+                        <a href="https://chartink.com/screener/copy-resistance-breakout-with-volume-2" target="_blank">Resistance Breakout</a>
+                        <a href="https://chartink.com/screener/kumo-breakout-large-consolidation" target="_blank">Kumo Breakout</a>
+                        <a href="https://chartink.com/screener/breaking-consolidation-1" target="_blank">Breaking Consolidation</a>
+                        <a href="https://chartink.com/screener/bull-flag" target="_blank">Bull Flag</a>
+                    </div>
+                </li>
+                <li id="nav-page2" class="nav-item"><a href="page2.html" class="nav-link">About Me</a></li>
             </ul>
         </nav>
     </header>
     <div id="main-content" class="content">
         <h2 id="content-title" class="content-title">Summary</h2>
-        <p id="content-paragraph" class="content-paragraph">This is the landing page,where it will have links whihc i freqently access</p>
+        <p id="content-paragraph" class="content-paragraph">This is the landing page, where it will have links which I frequently access.</p>
     </div>
     <footer id="main-footer" class="footer">
         <p id="footer-text" class="footer-text">&copy; 2024 Your Website</p>
     </footer>
     <script src="test.js"></script>
+    <script>
+        document.getElementById('page1-link').addEventListener('mouseover', function() {
+            document.getElementById('dropdown-menu').classList.add('show');
+        });
+
+        document.getElementById('page1-link').addEventListener('mouseout', function() {
+            setTimeout(function() {
+                document.getElementById('dropdown-menu').classList.remove('show');
+            }, 300);
+        });
+
+        document.getElementById('dropdown-menu').addEventListener('mouseover', function() {
+            document.getElementById('dropdown-menu').classList.add('show');
+        });
+
+        document.getElementById('dropdown-menu').addEventListener('mouseout', function() {
+            setTimeout(function() {
+                document.getElementById('dropdown-menu').classList.remove('show');
+            }, 300);
+        });
+    </script>
 </body>
 </html>
