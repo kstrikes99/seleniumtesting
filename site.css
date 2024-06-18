@@ -1,64 +1,167 @@
-/* General Styles */
+/* General styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-image: url('images/background1.jpg');
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: #441730;
-    color: rgb(255, 255, 255);
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-.header {
+.header, .footer {
     background-color: #333;
     color: white;
-    padding: 10px 0;
     text-align: center;
+    padding: 10px 0;
 }
 
-.navigation .nav-list {
-    list-style: none;
-    padding: 0;
+.header .title {
     margin: 0;
+    font-size: 24px;
 }
 
-.navigation .nav-item {
-    display: inline;
-    margin: 0 10px;
+.navigation {
+    background-color: #444;
+    overflow: hidden;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item {
+    padding: 14px 20px;
 }
 
 .nav-link {
     color: white;
     text-decoration: none;
-    padding: 5px 10px;
 }
 
 .nav-link:hover {
-    background-color: #555;
+    background-color: #ddd;
+    color: black;
 }
 
 .content {
     padding: 20px;
 }
 
-.footer {
-    background-color: #333;
+.content-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.content-paragraph {
+    margin-bottom: 10px;
+}
+
+.error {
+    color: red;
+    display: none;
+}
+
+/* Form styling */
+form {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+form label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form input[type="file"],
+form button {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px;
+    width: calc(100% - 180px); /* Adjusted width to fit input fields next to labels */
+}
+
+form button {
+    background-color: #4CAF50;
     color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    border: none;
+    cursor: pointer;
 }
 
-/* Specific Styles for Links */
-.nav-link.page1:hover {
-    background-color: #ff6347;
+form button:hover {
+    background-color: #45a049;
 }
 
-.nav-link.page2:hover {
-    background-color: #4682b4;
+#submit-button {
+    width: auto;
+    margin-left: 160px; /* Align the submit button with the input fields */
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.show {
+    display: block;
+}
+
+
+/* Social media links styling */
+.social-media-links {
+    margin-top: 20px;
+    text-align: center; /* Center align the icons */
+}
+
+.social-media-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+/* Change scale on hover */
+.social-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+
+:root {
+    --image-width: 40px;
+    --image-height: 40px;
 }

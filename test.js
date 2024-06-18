@@ -1,12 +1,41 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Add specific classes for hover effects
-    const page1Link = document.querySelector('nav ul li a[href="page1.html"]');
-    if (page1Link) {
-        page1Link.classList.add('page1');
-    }
-    
-    const page2Link = document.querySelector('nav ul li a[href="page2.html"]');
-    if (page2Link) {
-        page2Link.classList.add('page2');
-    }
+// Dropdown menu functionality
+document.getElementById('page1-link').addEventListener('mouseover', function() {
+    document.getElementById('dropdown-menu').classList.add('show');
 });
+
+document.getElementById('page1-link').addEventListener('mouseout', function() {
+    setTimeout(function() {
+        document.getElementById('dropdown-menu').classList.remove('show');
+    }, 300);
+});
+
+document.getElementById('dropdown-menu').addEventListener('mouseover', function() {
+    document.getElementById('dropdown-menu').classList.add('show');
+});
+
+document.getElementById('dropdown-menu').addEventListener('mouseout', function() {
+    setTimeout(function() {
+        document.getElementById('dropdown-menu').classList.remove('show');
+    }, 300);
+});
+
+// Form validation and submission
+function validateForm() {
+    var name = document.getElementById('name').value;
+    var phone = document.getElementById('phone').value;
+    var nameError = document.getElementById('name-error');
+    var phoneError = document.getElementById('phone-error');
+
+    nameError.style.display = name ? 'none' : 'block';
+    phoneError.style.display = phone ? 'none' : 'block';
+
+    if (name && phone) {
+        alert('Form submitted successfully!');
+        document.getElementById('contact-form').reset();
+    } else {
+        alert('Please fill in all required fields.');
+    }
+}
+
+// Attach the validateForm function to the button's onclick event
+document.getElementById('submit-button').addEventListener('click', validateForm);

@@ -6,36 +6,88 @@
     <title>Page 2</title>
     <link rel="stylesheet" href="site.css">
     <style>
-        /* Inline style for image size */
-        img {
-            width: 200px;
-            height: auto;
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
         }
 
-        /* Highlight style */
-        .highlight {
-            border: 3px solid #ff6347;
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Social media links styling */
+        .social-media-links {
+            margin-top: 20px;
+            text-align: center; /* Center align the icons */
+        }
+
+        .social-media-links a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .social-media-links img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        .social-media-links img:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+
+        /* Image styling */
+        #example-image {
+            width: 200px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        #example-image.highlight {
+            transform: scale(1.1);
+            filter: brightness(1.2);
         }
     </style>
 </head>
 <body>
     <header id="main-header" class="header">
-        <h1 id="page2-title" class="title">Page 2</h1>
+        <h1 id="page2-title" class="title">About the Author</h1>
         <nav id="main-nav" class="navigation">
             <ul id="nav-list" class="nav-list">
                 <li id="nav-home" class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li id="nav-page1" class="nav-item"><a href="page1.html" class="nav-link">Page 1</a></li>
-                <li id="nav-page2" class="nav-item"><a href="page2.html" class="nav-link">Page 2</a></li>
+                <li id="nav-page1" class="nav-item"><a href="page1.html" class="nav-link">Frequent Links</a></li>
+                <li id="nav-page2" class="nav-item"><a href="page2.html" class="nav-link">About Me</a></li>
             </ul>
         </nav>
     </header>
     <div id="page2-content" class="content">
-        <h2 id="content-title" class="content-title">Content of Page 2</h2>
-        <p id="content-paragraph" class="content-paragraph">This is the content of Page 2.</p>
-        <img id="example-image" class="example-image" src="images/example.jpg" alt="Example Image" onmouseover="highlightImage(this)" onmouseout="unhighlightImage(this)">
+        <h2 id="content-title" class="content-title">Kartik Prakash Mudigonda</h2>
+        <p id="content-paragraph" class="content-paragraph">About the Author.</p>
+        <img id="example-image" class="example-image" src="images/example.jpg" alt="Example Image" onmouseover="highlightImage(this)" onmouseout="unhighlightImage(this)" onclick="sendEmail()">
+
+        <div class="social-media-links" id="social-media-links">
+            <a href="https://www.instagram.com/kstrikes99" target="_blank">
+                <img src="images/instagram-logo.png" alt="Instagram">
+            </a>
+            <a href="mailto:kstrikes99@gmail.com" target="_blank" onclick="sendEmail()">
+                <img src="images/gmail-logo.png" alt="Gmail">
+            </a>
+            <a href="https://www.facebook.com/kartik.prakash.5" target="_blank">
+                <img src="images/facebook-logo.png" alt="Facebook">
+            </a>
+        </div>
     </div>
     <footer id="main-footer" class="footer">
-        <p id="footer-text" class="footer-text">&copy; 2024 Your Website</p>
+        <p id="footer-text" class="footer-text">&copy; 2025 All rights are reserved as per WWW rules and regulations on testing</p>
     </footer>
     <script src="test.js"></script>
     <script>
@@ -45,6 +97,11 @@
 
         function unhighlightImage(element) {
             element.classList.remove('highlight');
+        }
+
+        function sendEmail() {
+            window.location.href = 'mailto:kstrikes99@gmail.com';
+           
         }
     </script>
 </body>
