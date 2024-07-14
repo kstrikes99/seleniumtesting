@@ -5,64 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page 1</title>
     <link rel="stylesheet" href="site.css">
-<style>
-    /* Table styling */
-    table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
+    <style>
+        /* Form styling */
+        .contact-form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
             border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
+            border-radius: 5px;
+            background-color: #f9f9f9;
         }
 
-        th {
-            background-color: #f2f2f2;
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
         }
 
+        .contact-form input, .contact-form select, .contact-form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
 
+        .contact-form button {
+            background-color: #5cb85c;
+            color: white;
+            cursor: pointer;
+        }
 
-</style>
-
-
+        .contact-form button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
 </head>
 <body>
     <header id="main-header" class="header">
-        <h1 id="page1-title" class="title">Groww</h1>
+        <h1 id="page1-title" class="title">Upload Form </h1>
         <nav id="main-nav" class="navigation">
             <ul id="nav-list" class="nav-list">
                 <li id="nav-home" class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li id="nav-page1" class="nav-item"><a href="page1.html" class="nav-link">Frequent links</a></li>
-                <li id="nav-page2" class="nav-item"><a href="page2.html" class="nav-link">about me</a></li>
+                <li id="nav-page1" class="nav-item"><a href="page1.html" class="nav-link">Upload Form</a></li>
+                <li id="nav-page2" class="nav-item"><a href="page2.html" class="nav-link">Contact Me</a></li>
             </ul>
         </nav>
     </header>
     <div id="page1-content" class="content">
-        <h2 id="content-title" class="content-title">Groww</h2>
-        <p id="content-paragraph" class="content-paragraph">This page author visits to groww.</p>
+        <p>If you would like to get in touch for exciting news, please upload your interests and data.</p>
+        <h2 id="content-title" class="content-title">Contact Form</h2>
+            <form id="contact-form" class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="interests">Interests in Testing:</label>
+            <select id="interests" name="interests">
+                <option value="functional-testing">Functional Testing</option>
+                <option value="automation-testing">Automation Testing</option>
+                <option value="performance-testing">Performance Testing</option>
+                <option value="security-testing">Security Testing</option>
+            </select>
+            <label for="resume">Upload Resume:</label>
+            <input type="file" id="resume" name="resume" accept=".txt, .doc, .pdf">
+            <button type="submit" onclick="submitForm()">Submit</button>
+        </form>
     </div>
-
-
-    <table id="link-table" class="link-table">
-        <tr>
-            <th>Link 1</th>
-            <th>Link 2</th>
-            <th>Link 3</th>
-            <th>Link 4</th>
-        </tr>
-        <tr>
-            <td><a href="https://chartink.com/screener/copy-resistance-breakout-with-volume-2" target="_blank">Resistance Breakout</a></td>
-            <td><a href="https://chartink.com/screener/kumo-breakout-large-consolidation" target="_blank">Kumo Breakout</a></td>
-            <td><a href="https://chartink.com/screener/breaking-consolidation-1" target="_blank">Breaking Consolidation</a></td>
-            <td><a href="https://chartink.com/screener/bull-flag" target="_blank">Bull Flag</a></td>
-        </tr>
-    </table>
-</div>
     <footer id="main-footer" class="footer">
-        <p id="footer-text" class="footer-text">&copy; 2025 all rights are reserved as per wwww rule and regulations on testing </p>
+        <p id="footer-text" class="footer-text">&copy; 2025 All rights are reserved to the Author</p>
     </footer>
     <script src="test.js"></script>
 </body>
